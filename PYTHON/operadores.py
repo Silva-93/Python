@@ -57,3 +57,20 @@ altura = float(input('Digite sua altura: '))
 imc = peso / altura**2
 
 print(f'{nome}, seu peso é {peso}kg e sua altura é {altura}m com isso seu IMC é: {imc:.2f}')
+
+
+'''
+    Operadores relacionais
+   
+    >   Maior que
+    
+    <   Menor que
+    
+    >=  Maior ou igual a
+    
+    <=  Menor ou igual a
+    
+    !=  Diferente de
+    
+    ==  Igual a
+'''
