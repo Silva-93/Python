@@ -10,6 +10,16 @@
     // -> Divisão inteira
 
     ** -> Potência
+
+    Níveis de precedência dos operadores.
+
+    1° ()
+    
+    2° **
+    
+    3° *  /  //  %
+    
+    4° +  =
 """
 
 adicao = 10 + 10
@@ -32,3 +42,18 @@ print(f'Potência {potencia}')
 
 resto_divisao = 55 % 2
 print(f'Resto da divisão {resto_divisao}')
+
+
+#  EXERCÍCIO
+
+#  cálculo IMC
+
+nome = input('Digite seu nome: ')
+
+peso = float(input('Digite seu peso: '))
+
+altura = float(input('Digite sua altura: '))
+
+imc = peso / altura**2
+
+print(f'{nome}, seu peso é {peso}kg e sua altura é {altura}m com isso seu IMC é: {imc:.2f}')
