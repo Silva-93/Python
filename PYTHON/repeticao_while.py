@@ -22,36 +22,46 @@
 # print('Acabou!')
 
 
-qtd_linha = 5
+# qtd_linha = 5
 
-qtd_coluna = 5
+# qtd_coluna = 5
 
-linha = 1
+# linha = 1
 
-while linha <= qtd_linha:
-    coluna = 1
+# while linha <= qtd_linha:
+#     coluna = 1
     
-    while coluna <= qtd_coluna:
+#     while coluna <= qtd_coluna:
 
-        print(linha)
+#         print(f'{linha=}   ->   {coluna=}')
 
-        coluna += 1
+#         coluna += 1
     
-    linha +=1
+#     linha +=1
 
 
-print('Acabou!')
-
-
-
+# print('Acabou!')
 
 
 
 
+# nome = 'Jouber Vicente'
+
+# indice = 0 
+
+# novo_nome = ''
+# while indice < len(nome):
+#     #  percorrendo o texto digitado na variável nome
+#     letra = nome[indice]  #  "pegando" as letras da str
+    
+#     novo_nome += f'*{letra}'  #  Adicionando as letras em "novo_nome"
+#     indice += 1
+
+# print(novo_nome)
 
 
 
-
+#  CALCULADORA COM WHILE
 
 
 
