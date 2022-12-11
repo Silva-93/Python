@@ -65,72 +65,95 @@
 
 
 
-while True:
-    n1 = input('Digite um número.\nNúmero: ')
-    n2 = input('Digite outro número.\nNúmero: ')
-    operador = input('Digite o operador para realizar a conta. [+ - / *].\nOperador: ')
+# while True:
+#     n1 = input('Digite um número.\nNúmero: ')
+#     n2 = input('Digite outro número.\nNúmero: ')
+#     operador = input('Digite o operador para realizar a conta. [+ - / *].\nOperador: ')
 
-    numerosValidos = None
+#     numerosValidos = None
 
-    numero1 = 0
-    numero2 = 0
+#     numero1 = 0
+#     numero2 = 0
+
+#     try:
+#         #  Convertendo para números float
+#         numero1 = float(n1)
+#         numero2 = float(n2)
+
+#         #  Validando se são números válidos
+#         numerosValidos = True    
+#     except:
+#         numerosValidos = None
+
+#     if numerosValidos is None:
+#         print('Há um ou mais números inválidos digitados.')
+#         continue
+
+#     operadoresPermitidos = '+-/*'
+
+
+#     if operador not in operadoresPermitidos:
+#         print('Operador inválido.')
+#         continue
+
+#     if len(operador) > 1:
+#         print('Digite apenas um operador.')
+#         continue
     
-    try:
-        #  Convertendo para números float
-        numero1 = float(n1)
-        numero2 = float(n2)
+#     print('Realizando a sua conta. Confira o resultado abaixo.')
+#     if operador == '+':
+#         print(f'O resultado de {numero1} + {numero2} é {numero1 + numero2}')
 
-        #  Validando se são números válidos
-        numerosValidos = True    
-    except:
-        numerosValidos = None
+#     elif operador == '-':
+#         print(f'O resultado de {numero1} - {numero2} é {numero1 - numero2}')
 
-    if numerosValidos is None:
-        print('Há um ou mais números inválidos digitados.')
+#     elif operador == '/':
+#         print(f'O resultado de {numero1} / {numero2} é {numero1 / numero2}')
+
+#     elif operador == '*':
+#         print(f'O resultado de {numero1} * {numero2} é {numero1 * numero2}')
+    
+#     else:
+#         print('Tem algo de errado. Tente novamente.')
+
+    
+#     sair = input('Quer sair? [s]air: ')
+#     #  deixar as letras em minúsculo e verifica se começa com 's'
+#     sair = sair.lower().startswith('s')
+
+#     if sair is True:
+#         break
+
+
+
+
+
+# EXERCÍCIO -> QUAL LETRA FOI MAIS REPETIDA.
+
+
+frase = 'Python é uma liguangem multiparadigma criada por Guido Van Rossum.'
+
+i = 0
+qtd_de_vezes_letra_apareceu = 0
+letra_apareceu_mais_vezes = ''
+
+while i < len(frase):
+    
+    letra_atual = frase[i]  #  Percorrendo cada letra da frase
+    
+    if letra_atual == ' ':
+        i += 1
         continue
 
-    operadoresPermitidos = '+-/*'
-
-
-    if operador not in operadoresPermitidos:
-        print('Operador inválido.')
-        continue
-
-    if len(operador) > 1:
-        print('Digite apenas um operador.')
-        continue
+    qtd_de_letras = frase.count(letra_atual)  #  contando a quantidade que as letras apareceream
     
-    print('Realizando a sua conta. Confira o resultado abaixo.')
-    if operador == '+':
-        print(f'O resultado de {numero1} + {numero2} é {numero1 + numero2}')
-
-    elif operador == '-':
-        print(f'O resultado de {numero1} - {numero2} é {numero1 - numero2}')
-
-    elif operador == '/':
-        print(f'O resultado de {numero1} / {numero2} é {numero1 / numero2}')
-
-    elif operador == '*':
-        print(f'O resultado de {numero1} * {numero2} é {numero1 * numero2}')
+    if qtd_de_vezes_letra_apareceu < qtd_de_letras:
+        qtd_de_vezes_letra_apareceu = qtd_de_letras
+        letra_apareceu_mais_vezes = letra_atual
     
-    else:
-        print('Tem algo de errado. Tente novamente.')
+    i += 1
 
-    
-    sair = input('Quer sair? [s]air: ')
-    #  deixar as letras em minúsculo e verifica se começa com 's'
-    sair = sair.lower().startswith('s')
-
-    if sair is True:
-        break
-
-
-
-
-
-
-
-
+print(f'A letra que apareceu mais vezes foi "{letra_apareceu_mais_vezes}" que apareceu {qtd_de_vezes_letra_apareceu}x')
 
 
 
