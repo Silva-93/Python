@@ -26,52 +26,68 @@
 
 
 #  Alterando valores de uma lista
-lista = [10, 20, 30, 40]
+# lista = [10, 20, 30, 40]
 
-lista[2] = 300  #  Alterando o valor do 3° elemento
-print(lista)
-
-
-#  Apagando um valor especifico da lista
-del lista[2]
-print(lista)
+# lista[2] = 300  #  Alterando o valor do 3° elemento
+# print(lista)
 
 
-#  Adicionando elementos na lista
-lista.append(50)
-print(lista)
+# #  Apagando um valor especifico da lista
+# del lista[2]
+# print(lista)
 
 
-#  Removendo o último elemento da lista, caso não seja indicado qual índice é para ser excluído, o pop() excluirá o elemento no último índice da lista
-lista.pop()
-print(lista)
+# #  Adicionando elementos na lista
+# lista.append(50)
+# print(lista)
 
 
-#  Inserindo elementos em um índice específico da lista, caso não seja indicado qual índice é para ser inserido, o insert() adicionará o elemento no último índice da lista
-lista.insert(2, 30)
-print(lista)
+# #  Removendo o último elemento da lista, caso não seja indicado qual índice é para ser excluído, o pop() excluirá o elemento no último índice da lista
+# lista.pop()
+# print(lista)
+
+
+# #  Inserindo elementos em um índice específico da lista, caso não seja indicado qual índice é para ser inserido, o insert() adicionará o elemento no último índice da lista
+# lista.insert(2, 30)
+# print(lista)
 
 
 
-#  Limpando a lista, o clean() limpa todos os elementos da lista deixando uma lista vazia
-lista.clear()
-print(lista)
+# #  Limpando a lista, o clean() limpa todos os elementos da lista deixando uma lista vazia
+# lista.clear()
+# print(lista)
 
 
-#  juntando 2 ou mais listas em uma só
-lista_a = [1, 2, 3]
-lista_b = [4, 5, 6]
+# #  juntando 2 ou mais listas em uma só
+# lista_a = [1, 2, 3]
+# lista_b = [4, 5, 6]
 
-lista_c = lista_a + lista_b
-print(lista_c)
+# lista_c = lista_a + lista_b
+# print(lista_c)
+
+# # outra maneira
+
+# lista_a.extend(lista_b)
+# print(lista_a)
+
+
+# #  copiando uma lista
+# lista_d = [7, 8, 9]
+
+# lista_e = lista_d.copy()
+# print(lista_e)
+
+
+#  exibindo os índices da lista
+# lista_nome = ['Maria', 'João', 'Ana', 'Rafael']
+# indices = range(len(lista_nome))
+
+# for i in indices:
+#     print(i, lista_nome[i])
 
 # outra maneira
 
-lista_a.extend(lista_b)
-print(lista_a)
-
-
-
-
-
-
+listaNome = ['Joao', 'Maria', 'Luiza', 'Fernando']
+#                             fazendo com que a contagem comece do 1
+for i in enumerate(listaNome, start=1):
+    print(i)
