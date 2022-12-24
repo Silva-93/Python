@@ -87,7 +87,79 @@
 
 # outra maneira
 
-listaNome = ['Joao', 'Maria', 'Luiza', 'Fernando']
-#                             fazendo com que a contagem comece do 1
-for i in enumerate(listaNome, start=1):
-    print(i)
+# listaNome = ['Joao', 'Maria', 'Luiza', 'Fernando']
+# #                             fazendo com que a contagem comece do 1
+# for i in enumerate(listaNome, start=1):
+#     print(i)
+
+
+
+#  Exercício listas
+'''
+    Faça uma lista de compra com uma lista. O usuário deve ter a possibilidade de inserir, apagar e listar os valores da lista. Não permita que o programa quebre com erros de índice inexistentes da lista.
+'''
+
+
+
+import os
+
+lista = []
+while True:
+    # O usuário deve ter a possibilidade de inserir, apagar
+    print('Selecione uma opção. Digite [f]im para sair do programa.')
+    opcao = input('[i]nserir [a]pagar [l]istar: ')
+
+    if opcao == 'i':
+        os.system('clear')  # limpa o terminal
+        item = input('Item: ')
+        lista.append(item)
+
+
+    # Apagar itens da lista 
+    elif opcao == 'a':
+        indice_str = input('Escolha o índice para apagar: ')
+
+        try:
+            indice = int(indice_str)
+            del lista[indice]  #  apaga um item da lista
+        except:
+            print('Não foi possível apragar esse índice.')
+
+
+    #  Listar itens da lista
+    elif opcao == 'l':
+        os.system('clear')
+
+        if len(lista) == 0:
+            print('Nada para listar')
+
+        for i, item in enumerate(lista):  # lista a os itens da lista com seus índices
+            print(f'Índice [{i}] -> {item}')
+
+    elif opcao == 'f':
+        print('Finalizando o programa')
+        break
+
+
+    else:
+        print('Por favor, escolha entre as opções [i], [a] ou [l].')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
