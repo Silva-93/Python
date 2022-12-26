@@ -36,6 +36,11 @@ def soma(a, b):
 print(soma(15, 15))
 
 
+# Chamando a função com argumentos nomeados
+print(soma(a=10, b=20))
+
+
+
 # Função com parâmetros e valores padrãos 
 def multiplicacao(a=10, b=10):
     return a * b
@@ -45,7 +50,17 @@ print(multiplicacao())
 print(multiplicacao(5, 5))
 
 
+# Sabendo quando um parâmetro de valor "None" foi passada nos argumentos
+def multi(x, y, z=None):
+    if z is not None:
+        return f'{x= } {y= } {z= } | R= {x*y*z}'
+    else:
+        return f'{x= } {y= } | R= {x*y}'
 
+print(multi(2, 5, 3))
+
+print(multi(2, 3))
+    
 
 
 
