@@ -77,3 +77,15 @@ produtos = [
 
 # list comprehension com mais de um for
 
+lista = []
+
+for x in range(3):
+    for y in range(3):
+        lista.append((x, y))
+
+# print(lista)
+
+# Mesmo código com list comprehension
+lista2 = [(x, y) for x in range(3) for y in range(3)]
+
+print(lista2)
