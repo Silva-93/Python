@@ -3,7 +3,7 @@
 '''
 
 def criarSaudacao(saudacao):
-    def saudar(nome):
+    def saudar(nome):  # Cria uma função que não é executada no mesmo momento, mas salva na memória a executção da função principal "criarSaudacao"
         return f'{saudacao}, {nome}!'
     return saudar  #  Retorna a função, mas não executa a função
 
