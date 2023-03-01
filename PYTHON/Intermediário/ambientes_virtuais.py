@@ -12,8 +12,48 @@
 """
 
 """ 
-    Comando para criar um ambiente virtual no Windows no Power Shell
+    Criando um ambiente virtual no Windows no Power Shell
 
     python -m venv <nome> 
+"""
+
+""" 
+    gcm <executavel>      Mostra o local onde o executável está
+
+    gcm python
+
+    ou
+
+    gcm python -Syntax
+
+    C:\Users\Jouber\AppData\Local\Programs\Python\Python311\python.exe
+"""
+
+""" 
+    Permitindo o ambiente virtual pelo power shell
+
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+"""
+
+"""
+    Ativando o ambiente virtual
+
+    .\venv\Scripts\actvate
+
+    para desativar digite "deactivate
+"""
+
+"""
+    pip freeze -> mostra os pacotes instalados
+"""
+
+"""
+    Criando um arquivo de configuração para instalações futuras
+
+    pip freeze > requirements.txt
+
+    Para instalar os programas nas versões que estão no arquivo "requirements.txt"
+
+    pip install -r .\requirements.txt
 """
 
