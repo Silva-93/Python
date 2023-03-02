@@ -10,3 +10,30 @@
 
 # print(isinstance(string, str))
 
+
+# Criando uma classe com dois atributos
+class Pessoa:
+    def __init__(self, nome, sobrenome):
+        self.nome = nome
+        self.sobrenome = sobrenome
+
+p1 = Pessoa('Jouber', 'Vicente')
+
+""" 
+print(p1.nome)
+print(p1.sobrenome)
+"""
+
+# Métodos em instâcias de classes Python
+
+class Carro:
+    def __init__(self, nome):
+        self.nome = nome
+
+    # Métodos da classe
+    def acelerar(self):
+        print(f'{self.nome} está acelerando')
+
+
+celta = Carro('Celta')
+celta.acelerar()  # chamando a classe com o método.
