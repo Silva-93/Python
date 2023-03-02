@@ -12,7 +12,9 @@
 nome = 'Jouber'
 
 preco = 10000.938274
+
 variavel = '%s, o preco é %.2f ' % (nome, preco)
+
 print(variavel)
 
 
