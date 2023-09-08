@@ -18,3 +18,8 @@
 # - Os cabeçalhos HTTP (Content-Type, Accept)
 # - O corpo da mensagem (Pode estar em vazio em alguns casos)
 
+path = 'c:\Users\Jouber\Documents\GitHub\Python\PYTHON\Modulos_comuns_no_python\HTTP'
+# Servindo um servidor HTTP com python
+# python -m http.server -d <path> <port>(opcional)
+# python -m http.server -d c:\Users\Jouber\Documents\GitHub\Python\PYTHON\Modulos_comuns_no_python\HTTP 3333
+
