@@ -12,4 +12,4 @@ response = requests.get(url)
 print(response.status_code)  # Código de estatus da requisição
 # print(response.headers)  # Cabeçalho da requisição
 # print(response.content)  # Conteúdo do site em bytes
-print(response.text)
+print(response.text)  # Conteúdo HTML do site
