@@ -5,15 +5,27 @@
 """
 
 import pymysql
+import dotenv
+import os
+
+dotenv.load_dotenv()
 
 # conexão com a base de dados
 connection = pymysql.connect(
-    host='localhost',  # Servidor que será conectado
-    user='usuario',
-    password='senha',
-    database='base_de_dados',
+    host=os.environ['MYSQL_HOST'],  # Servidor que será conectado
+    user=os.environ['MYSQL_USER'],
+    password=os.environ['MYSQL_PASSWORD'],
+    database=os.environ['MYSQL_DATABASE'],
 )
 
 with connection:
     with connection.cursor() as cursor:
-        ...
+        cursor.execute(
+            'CREATE TABLE IF NOT EXISTS customers ('
+                'id INT NOT NULL AUTO_INCREMENT, '
+                'nome VARCHAR(50) NOT NULL, '
+                'idade INT NOT NULL, '
+                'PRIMARY KEY (id) '
+            ')'
+        )
+        print(cursor)
