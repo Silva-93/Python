@@ -17,7 +17,7 @@
 
     No arquivo "settings.py" é onde vai ser configurado tudo sobre o projeto.
 
-    O arquivo "urls.py" é a mão de todas as urls do seu programa.
+    O arquivo "urls.py" é a mão de todas as urls do seu programa. Só existe na raiz do projeto, inicialmente
 
     O arquivo "wsgi.py" é a interface de comunicação do django com o servidor que estiver sendo utilizado.
 
@@ -31,4 +31,7 @@
     O arquivo "models.py", é onde serão criados os models.
 
     O arquivo "views.py", é onde serão criadas as views. 
+
+
+    Para configurar uma página html no djando é necessário configurar as views com o arquivo html e indicalos nas settings.py do projeto em INSTALLED_APPS. Dentro do app crie uma pasta com o nome "templates" e dentro dessa pasta crie outra pasta com o nome do app, nela é onde ficarão os arquivos html.
 """
