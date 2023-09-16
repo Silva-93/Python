@@ -34,4 +34,6 @@
 
 
     Para configurar uma página html no djando é necessário configurar as views com o arquivo html e indicalos nas settings.py do projeto em INSTALLED_APPS. Dentro do app crie uma pasta com o nome "templates" e dentro dessa pasta crie outra pasta com o nome do app, nela é onde ficarão os arquivos html.
+
+    Templates globais -> No arquivo "settings.py" do projeto há uma variável chamada "TEMPLATES", nela, há um chave chamada "'DIRS: []'" nela pode colocar diretórios onde se quer buscar templates.
 """
