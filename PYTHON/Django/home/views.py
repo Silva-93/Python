@@ -4,7 +4,7 @@ from django.shortcuts import render  # type: ignore
 # Create your views here.
 def home(request):
     
-    context = {'text': 'Agora essa merda pegou!'}
+    context = {'text': 'Estou na HOME.'}
     
     return render(
         request,

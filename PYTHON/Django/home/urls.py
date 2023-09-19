@@ -5,5 +5,5 @@ from home import views as home_views
 # MVT (Model View Template)
 
 urlpatterns = [
-    path('', home_views.home),  # Página HOME
+    path('', home_views.home, name='home'),  # Página HOME
 ]

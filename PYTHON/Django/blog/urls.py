@@ -5,5 +5,5 @@ from blog import views as blog_views
 # MVT (Model View Template)
 
 urlpatterns = [
-    path('', blog_views.blog),  # Página HOME
+    path('', blog_views.blog, name='blog'),  # Página HOME
 ]

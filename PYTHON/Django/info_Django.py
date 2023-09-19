@@ -45,4 +45,9 @@
         {% block %}
             {{ "chave" }}
         {% endblock %}
+
+    URLs -> Caso for trabalhar com urls no django, não é recomendado utilizar-las diretamente(hard code), em vez disso, é usando a sintaxe do django <a href="{% url '' %}">. Dentro do arquivo "urls.py" do app adicione o nome da url ↓
+        urlpatterns = [
+            path('', home_views.home, name='home'),  # Página HOME
+        ]
 """
