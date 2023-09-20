@@ -50,4 +50,6 @@
         urlpatterns = [
             path('', home_views.home, name='home'),  # Página HOME
         ]
+
+    URLs dinâmicas -> 
 """
