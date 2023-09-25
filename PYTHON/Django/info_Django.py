@@ -52,4 +52,20 @@
         ]
 
     URLs dinâmicas -> 
+
+    Cada alteração que é feita nos models, você está trabalhando na base de dados.
+
+    Executando as migrations
+        python manage.py migrate 
+    Com esse comando é possível acesse a área "admin" do django "127.0.0.1/8000/admin"
+
+    Criando um super usuário
+        python manage.py createsuperuser
+            name: <user>
+            email: <e-amil>
+            password: <passwd>
+            password (again): <passwd>
+    
+    Mudando a senha do usuário
+        python manage.py changepassword <user>
 """
