@@ -68,4 +68,9 @@
     
     Mudando a senha do usuário
         python manage.py changepassword <user>
+
+    
+    Models -> Sempre que um models for modificado é necessário executar os comandos 
+        python manage.py makemigrations
+        python manage.py migrate
 """
