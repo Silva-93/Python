@@ -25,6 +25,9 @@ class Contact(models.Model):
     email = models.EmailField(max_length=254, blank=True)  # "blank=True" torna o campo opcional
     create_date = models.DateTimeField(default=timezone.now)
     description = models.TextField(blank=True) 
+    show = models.BooleanField(default=True)  # assim que o contato for cadastrado ele será mostrado na tela
+    picture =models.ImageField(blank=True, upload_to='pectures/%Y/%m/')
+
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
