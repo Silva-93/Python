@@ -12,3 +12,11 @@ class ContactAdmin(admin.ModelAdmin):
     list_max_show_all = 100  # mostra 100 contatos por página
     list_editable = 'first_name', 'last_name'  # adiciona uma forma de editar os valores sem ter que entrar no contato
     list_display_links = 'id',  # adiciona um link para entrar nas configurações do contato, campo não pode estar no list_editable e o campo deve estar referido no list_display
+
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('name'),
+    ordering = '-id',
+
+    
