@@ -1,6 +1,6 @@
-from django.db import models
-from django.utils import timezone
-from django.contrib.auth.models import User
+from django.db import models  # type: ignore
+from django.utils import timezone  # type: ignore
+from django.contrib.auth.models import User  # type: ignore
 
 # Create your models here.
 """ 
@@ -35,20 +35,20 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=50, blank=True)
     phone = models.CharField(max_length=50)
     email = models.EmailField(max_length=254, blank=True)  # "blank=True" torna o campo opcional
-    create_date = models.DateTimeField(default=timezone.now)
-    description = models.TextField(blank=True) 
+    created_date = models.DateTimeField(default=timezone.now)
+    description = models.TextField(blank=True)
     show = models.BooleanField(default=True)  # assim que o contato for cadastrado ele será mostrado na tela
-    picture = models.ImageField(blank=True, upload_to='pectures/%Y/%m/')
-    category = models.ForeignKey(  # Chave estrangeira
-        Category, 
+    picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/')
+    category = models.ForeignKey(  # chave estrangeira
+        Category,
         on_delete=models.SET_NULL,
         blank=True, null=True
-    ),
-    owner = models.ForeignKey(  # Chave estrangeira
-        User, 
+    )
+    owner = models.ForeignKey(  # chave estrangeira
+        User,
         on_delete=models.SET_NULL,
         blank=True, null=True
-    ),
+    )
 
 
     def __str__(self) -> str:
