@@ -4,7 +4,7 @@
 
 numero = int(input('Digite um núemro.\nNúmero: '))
 
-unidade = numero // 1 % 10  # número dividido por 1 e com o módulo de 10, o que sobra é a unidade
+unidade = numero // 1 % 10  # número dividido por 1 e com o módulo de 10, o que sobrar é a unidade
 dezena = numero // 10 % 10 
 centena = numero // 100 % 10
 milhar = numero // 1000 % 10
