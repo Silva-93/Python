@@ -92,9 +92,11 @@
     display: block;
     padding: var(--spacing);
     color: var(--link-light-color);
+    text-align: center;
     text-decoration: none;
     transition: background-color var(--transition-fast) ease-in-out;
     border-radius: var(--default-border-radius);
+    width: 80px;
   }
   
   .menu-link:hover {
