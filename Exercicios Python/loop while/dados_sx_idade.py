@@ -12,20 +12,24 @@ while True:
     print('--------------------------')
 
     idade = int(input('Idade: '))
-    sexo = str(input('Sexo [M/F]: ')).upper()
-    opcao = str(input('Quer continuar? [S/N]: ')).upper()
+    sexo = ' '
+    while sexo not in 'MF':
+        sexo = str(input('Sexo [M/F]: ')).strip().upper()[0]
+    
+    if idade >= 18:
+        mais_18 += 1
+    
+    if sexo in 'M':
+        total_homens += 1
+    
+    if sexo in 'Ff' and idade < 20:
+        mulher_menor_20 += 1
 
-    if opcao != 'N':    
-        if sexo == 'F' and idade < 20:
-            mulher_menor_20 += 1
-        
-        elif sexo == 'M':
-            total_homens += 1
+    opcao = ' '
+    while opcao not in 'SN':
+        opcao = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
 
-        elif idade > 18:
-            mais_18 += 1
-        
-    else:
+    if opcao == 'N':
         break
 
 print(f'Ao todo foram {mais_18} pessoas maiores de 18 cadastradas.')
