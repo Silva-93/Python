@@ -20,6 +20,7 @@ print('--' * 30)
 for linha in range(0, 3):
     for coluna in range(0, 3):
         print(f'[{matriz[linha][coluna]:^5}]', end='')
+        
         if matriz[linha][coluna] % 2 == 0:
             soma_pares += matriz[linha][coluna]
     print()
