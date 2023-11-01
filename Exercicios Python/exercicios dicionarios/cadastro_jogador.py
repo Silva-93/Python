@@ -24,7 +24,8 @@ for y in range(partidas):
     sleep(1)
     print(f'   => Na partida {y+1}, fez {dados["gols"][y]} gols. ')
 
-
+print()
+print(f'O total de gols realizado foi {dados["total"]} gols.')
 
 
 
