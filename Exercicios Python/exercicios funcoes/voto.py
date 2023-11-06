@@ -20,3 +20,4 @@ def voto(nascimento):
 nascimento = int(input('Ano de nascimento: '))
 
 print(voto(nascimento))
+
