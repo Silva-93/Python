@@ -30,6 +30,19 @@ def moeda(preco=0, moeda='R$'):
     return f'{moeda}{preco:.2f}'.replace('.', ',')
 
 
+def resumo(numero, taxa=0, desconto=0):
+    print('-' * 35)
+    print('RESUMO DO VALOR'.center(35 ))
+    print('-' * 35)
+
+    print(f'Preço analisado: \t{moeda(numero)}')
+    print(f'O dobro do preço é: \t{dobro(numero, True)}')
+    print(f'A metado do preço é: \t{metade(numero, True)}')
+    print(f'{taxa}% de aumento é: \t{aumento(numero, taxa, True)}')
+    print(f'{desconto}% de desconto é: \t{diminuir(numero, desconto, True)}')
+    print('-' * 35)
+
+
 
 
 
