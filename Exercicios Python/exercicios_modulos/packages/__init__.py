@@ -1,1 +1,0 @@
-from exercicios_modulos.packages import moeda, dados

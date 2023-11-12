@@ -2,7 +2,7 @@
     Crie um programa chamado modulo_moeda.py que tenhas as funções aumentar(), diminuir(), dobro() e metade(). Faça outro programa que importe modulo_moeda.py e use suas funções. 
 """
 
-from exercicios_modulos.packages import moeda
+from modulos.packages import moeda
 
 num = float(input('Digite um valor.\nR$: '))
 
