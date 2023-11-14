@@ -1,12 +1,19 @@
 from interface import *
+from arquivo import *
 from time import sleep
 
 
+arq = 'sistema_de_cadastro.txt'
+
+if not arquivoExiste(arq):
+    criarArquivo(arq)
+
+
 while True:
-    resposta = menu(['Criar Arquivo', 'Cadastrar Pessoa', 'Listar Pessoas', 'Sair do Sistema'])
+    resposta = menu(['Ver Pessoas Cadastradas', 'Cadastrar Nova Pessoa', 'Sair do Sistema'])
 
     if resposta == 1:
-        cabecalho('Opção 1')
+        lerArquivo(arq)
     
     elif resposta == 2:
         cabecalho('Opção 2')
