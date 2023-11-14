@@ -16,7 +16,10 @@ while True:
         lerArquivo(arq)
     
     elif resposta == 2:
-        cabecalho('Opção 2')
+        cabecalho('NOVO CADASTRO.')
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrar(arq, nome, idade)
     
     elif resposta == 3: 
         cabecalho('\033[36mSaindo do sistema.\033[m')
@@ -25,4 +28,4 @@ while True:
     else:
         cabecalho('\033[31mOpção inválida\033[m')
 
-    sleep(2)
+    sleep(1)

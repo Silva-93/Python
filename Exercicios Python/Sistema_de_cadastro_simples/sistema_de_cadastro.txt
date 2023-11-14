@@ -1,5 +1,3 @@
 Jouber;30
-Vicente;32
 Roseane;52
-José;69
-Mariana;23
+Vicente;32
