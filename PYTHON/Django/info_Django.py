@@ -17,7 +17,7 @@
 
     No arquivo "settings.py" é onde vai ser configurado tudo sobre o projeto.
 
-    O arquivo "urls.py" é a mão de todas as urls do seu programa. Só existe na raiz do projeto, inicialmente
+    O arquivo "urls.py" é a mãe de todas as urls do seu programa. Só existe na raiz do projeto, inicialmente
 
     O arquivo "wsgi.py" é a interface de comunicação do django com o servidor que estiver sendo utilizado.
 
