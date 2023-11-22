@@ -3,7 +3,7 @@ from contact.models import Contact
 
 # Create your views here.
 def index(request):
-    contacts = Contact.objects.all()
+    contacts = Contact.objects.filter(show=True).order_by('-id')[0:50]  # mostra os 50 primeiros contatos
 
     context = {
         'contacts': contacts
