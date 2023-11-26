@@ -7,7 +7,8 @@ def index(request):
     contacts = Contact.objects.filter(show=True).order_by('-id')[0:50]  # mostra os 50 primeiros contatos
 
     context = {
-        'contacts': contacts
+        'contacts': contacts,
+        'site_title': 'Contatos - '
     }
 
     return render(
@@ -18,10 +19,13 @@ def index(request):
 
 
 def contact(request, contact_id):
-    single_contacts = get_object_or_404(Contact, pk=contact_id, show=True)
+    single_contact = get_object_or_404(Contact, pk=contact_id, show=True)
+
+    site_title = f'{single_contact.first_name} {single_contact.last_name} - '
 
     context = {
-        'contact': single_contacts
+        'contact': single_contact,
+        'site_tilte': site_title
     }
 
     return render(
