@@ -4,13 +4,15 @@
   <div class="form-wrapper">
     <h2>Contact</h2>
 
-    <form action="{% url "contact:create" %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}  {% comment %} proteção contra ataques {% endcomment %}
-      <div class="form-content">
-        <div class="form-group">
-          <label for="id_first_name">LABEL</label>
-          <input type="text" name="first_name" maxlength="255" id="id_first_name" />
+    <form action="{% url 'contact:create' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %} {% comment %}proteção contra ataques{% endcomment %}
+      {% for fields in form %}
+        <div class="form-content">
+          <div class="form-group">
+            <label for="{{ fields.id_for_label }}">{{ fields.label }}</label>
+            {{ fields }}
+          </div>
         </div>
-      </div>
+      {% endfor %}
 
       <div class="form-content">
         <div class="form-group">
