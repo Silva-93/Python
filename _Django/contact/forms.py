@@ -7,6 +7,8 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact  # Modelo para criação do formulário
         fields = 'first_name', 'last_name', 'phone',  # campos do formulário
+        
+        widgets = {'first_name': forms.TextInput(attrs= {'placeholder': 'Digite seu nome'})}
 
     def clean(self):
         cleaned_data = self.cleaned_data
