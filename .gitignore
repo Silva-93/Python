@@ -1,6 +1,7 @@
 mysql_206
 staticfiles
-env
+env/
 static/
 media/
 local_settings.py
+venv/
