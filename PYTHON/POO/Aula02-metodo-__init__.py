@@ -1,25 +1,18 @@
-# class - Classes são moldes para criar novos objetos As classes geram novos objetos (instâncias) que podem ter seus próprios atributos e métodos.
+""" 
+    __init__(): -> Inicializa os atributos da classe
+    
+    self -> Faz referência ao objeto que está sendo criado, ele é sempre o primeiro parâmetro do método. Ao chamar a classe, não necessário passar o self como parâmetro.
 
-# Os objetos gerados pela classe podem usar seus dados internos para realizar várias ações.
+"""
 
-# Por convenção, usamos PascalCase para nomes de classes.
-
-# string = 'Luiz'  # str
-
-# print(string.upper())|
-
-# print(isinstance(string, str))
-
-
-# Criando uma classe com dois atributos
 class Pessoa:
     # atributos da classe ↓
     def __init__(self, nome, sobrenome):
         self.nome = nome
         self.sobrenome = sobrenome
 
+#            nome      sobrenome
 p1 = Pessoa('Jouber', 'Vicente')
-
 
 print(p1.nome)
 print(p1.sobrenome)
