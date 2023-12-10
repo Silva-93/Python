@@ -1,8 +1,4 @@
-import log
-
-
-
-
+from log import LogFileMixin, LogPrintMixin
 
 
 
