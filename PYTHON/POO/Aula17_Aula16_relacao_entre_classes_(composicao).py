@@ -12,7 +12,7 @@ class Cliente:
 
 
     def inserir_endereco(self, rua, numero):
-        self.enderecos.append(Endereco(rua, numero))  # Criando a instâcia de endereço dentro da classe cliente
+        self.enderecos.append(Endereco(rua, numero))  # Criando a instâcia de endereço dentro da classe cliente (Composição)
 
 
 
