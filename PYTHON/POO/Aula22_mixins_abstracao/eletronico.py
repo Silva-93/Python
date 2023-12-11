@@ -1,4 +1,4 @@
-from log import LogPrintMixin, LogFileMixin
+from log import LogFileMixin
 
 class Eletronico:
     def __init__(self, nome):
