@@ -9,9 +9,6 @@
     Relançando exceções
 """
 
-
-
-
 class MeuError(Exception):
     ...
 
@@ -25,6 +22,9 @@ class OutroError(Exception):
 
 def levantar():
     exception_ = MeuError('A', 'B', 'C')
+
+    # adicionando uma nota
+    exception_.add_note('Você errou isso. ↓↓↓')
     
     raise exception_
 
@@ -41,3 +41,37 @@ except (MeuError, ZeroDivisionError) as error:
     exception_ = OutroError('Outro error')
 
     raise exception_ from error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
