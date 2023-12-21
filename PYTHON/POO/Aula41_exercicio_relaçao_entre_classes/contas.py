@@ -22,6 +22,12 @@ class Conta(abc.ABC):
         print('--' * 20)
 
 
+    def __repr__(self) -> str:
+        clas_name = type(self).__name__
+        attrs = f'{self.agencia!r}, {self.conta!r}, {self.saldo!r}'
+        return f'{clas_name} -> {attrs}'
+
+
 
 # ContaPoupanca herda de Conta
 class ContaPoupanca(Conta):
@@ -58,6 +64,12 @@ class ContaCorrente(Conta):
         print(f'Seu limite é: [{-self.limite:.2f}]')
         self.detalhes(f'(SAQUE de [{valor}] NEGADO!)')
         return self.saldo
+    
+
+    def __repr__(self) -> str:
+        clas_name = type(self).__name__
+        attrs = f'{self.agencia!r}, {self.conta!r}, {self.saldo!r}, {self.limite!r}'
+        return f'{clas_name} -> {attrs}'
 
 
 
