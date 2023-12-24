@@ -11,11 +11,21 @@
             <label for="{{ fields.id_for_label }}">{{ fields.label }}</label>
             {{ fields }}
             {{ fields.errors }}
+
+            {% if fields.help_text %}
+              <p class="help-text">{{ fields.help_text }}</p>
+            {% endif %}
+                        
           </div>
         </div>
-      {% endfor %}
-
-      <div class="form-content">
+        
+          {% if fields.name == 'picture' and fields.value.url%}
+            <div class="form-group">
+              <img src="{{ fields.value.url }}" alt="">
+            </div>
+          {% endif %}
+        {% endfor %}
+        
         <div class="form-group">
           <button class="btn" type="submit">Send</button>
         </div>

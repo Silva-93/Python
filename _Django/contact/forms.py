@@ -4,17 +4,19 @@ from contact.models import Contact
 
 
 class ContactForm(forms.ModelForm):
+    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*'}))
+
     class Meta:
         model = Contact  # Modelo para criação do formulário
         # campos do formulário
-        fields = 'first_name', 'last_name', 'phone', 'email', 'description', 'category'
+        fields = 'first_name', 'last_name', 'phone', 'email', 'description', 'category', 'picture'
 
-        widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder': 'Nome'}),
-            'last_name': forms.TextInput(attrs={'placeholder': 'Sobrenome'}),
-            'phone': forms.TextInput(attrs={'placeholder': 'Telefone'}),
-            'email': forms.EmailInput(attrs={'placeholder': 'E-mail'}),
-        }
+        # widgets = {
+        #     'first_name': forms.TextInput(attrs={'placeholder': 'Nome'}),
+        #     'last_name': forms.TextInput(attrs={'placeholder': 'Sobrenome'}),
+        #     'phone': forms.TextInput(attrs={'placeholder': 'Telefone'}),
+        #     'email': forms.EmailInput(attrs={'placeholder': 'E-mail'}),
+        # }
 
     def clean(self):
         # cleaned_data = self.cleaned_data
