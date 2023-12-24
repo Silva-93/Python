@@ -12,4 +12,5 @@ urlpatterns = [
     path('contact/create/', views.create, name='create'),  # type: ignore
     path('contact/<int:contact_id>/detail/', views.contact, name='contact'),  # type: ignore
     path('contact/<int:contact_id>/update/', views.update, name='update'),  # type: ignore
+    path('contact/<int:contact_id>/delete/', views.delete, name='delete'),  # type: ignore
 ] 
