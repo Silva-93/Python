@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm  # type: ignore
 from django.contrib.auth.models import User  # type: ignore
 
 
+
 class ContactForm(forms.ModelForm):
     picture = forms.ImageField(
         widget=forms.FileInput(attrs={'accept': 'image/*'}))
