@@ -2,10 +2,12 @@ from django import forms  # type: ignore
 from django.core.exceptions import ValidationError  # type: ignore
 from contact.models import Contact
 from django.contrib.auth.forms import UserCreationForm  # type: ignore
+from django.contrib.auth.models import User  # type: ignore
 
 
 class ContactForm(forms.ModelForm):
-    picture = forms.ImageField(widget=forms.FileInput(attrs={'accept': 'image/*'}))
+    picture = forms.ImageField(
+        widget=forms.FileInput(attrs={'accept': 'image/*'}))
 
     class Meta:
         model = Contact  # Modelo para criação do formulário
@@ -51,8 +53,25 @@ class ContactForm(forms.ModelForm):
         return first_name
 
 
-
-
 class RegisterForm(UserCreationForm):
-    ...
+    # Tornando campos obrigatórios
+    first_name = forms.CharField(required=True, min_length=3)
+    last_name = forms.CharField(required=True, min_length=3)
+    email = forms.EmailField(required=True)
 
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email',
+                  'username', 'password1', 'password2')
+
+    # Validação do campo de e-mail
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+
+        if User.objects.filter(email=email).exists():
+            self.add_error(
+                'email',  # Campo onde será mostrada a msg de erro
+                ValidationError('E-mail já existe!')  # Msg que será mostrada.
+            )
+
+        return email
