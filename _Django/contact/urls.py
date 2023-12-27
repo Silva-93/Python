@@ -1,6 +1,6 @@
 from django.contrib import admin  # type: ignore
 from . import views  
-from django.urls import path, include  # type: ignore
+from django.urls import path  # type: ignore
 
 app_name = 'contact'
 
@@ -18,5 +18,6 @@ urlpatterns = [
     path('user/create/', views.register, name='register'),  # type: ignore
     path('user/login/', views.login_view, name='login'),  # type: ignore
     path('user/logout/', views.logout_view, name='logout'),  # type: ignore
+    path('user/update/', views.user_update, name='user_update'),  # type: ignore
     
 ] 
