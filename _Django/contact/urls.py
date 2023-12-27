@@ -16,5 +16,7 @@ urlpatterns = [
     
     # user (Create, Read, Update)
     path('user/create/', views.register, name='register'),  # type: ignore
+    path('user/login/', views.login_view, name='login'),  # type: ignore
+    path('user/logout/', views.logout_view, name='logout'),  # type: ignore
     
 ] 
