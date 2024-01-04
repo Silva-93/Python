@@ -38,6 +38,9 @@ class CarroPopular(Veiculo):
 
 # simple factory
 class VeiculoFactory:
+    def __init__(self, tipo) -> None:
+        self.carro = self.get_carro(tipo)
+
     @staticmethod
     def get_carro(tipo: str) -> Veiculo:  # type: ignore
         if tipo == 'luxo':
@@ -49,11 +52,16 @@ class VeiculoFactory:
         assert 0, 'Vaículo não existe'
 
 
+    def buscar_cliente(self):
+        self.carro.buscar_cliente()
+
+
+# código cliente
 if __name__ == '__main__':
     from random import choice
 
     carros_disponiveis = ['luxo', 'popular']
 
     for i in range(10):
-        carro = VeiculoFactory.get_carro(choice(carros_disponiveis))
+        carro = VeiculoFactory(choice(carros_disponiveis))
         carro.buscar_cliente()
