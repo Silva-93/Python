@@ -1,10 +1,10 @@
 """ 
     Enum -> Enumerações
 
-    Enumerações na programação, são usadas em ocasiões onde temos um determinado número de coisas. Enums têm menbros e sues valores são constantes.
+    Enumerações na programação, são usadas em ocasiões onde temos um determinado número de coisas. Enums têm menbros e seus valores são constantes.
 
     Enums em python:
-        - São um conjunto de nomes simbólicos (membros) ligados a valores únicos, podem ser iterados para retornar seus menbros canônicos no ordem de definição
+        - São um conjunto de nomes simbólicos (membros) ligados a valores únicos, podem ser iterados para retornar seus menbros canônicos na ordem de definição
 
     enum.Enum é a superclasse para suas enumerações. Mas também pode ser usada diretamente (mesmo assim, Rnums não são classes normais um Python).
     Você poderá usar seu Enum com type annotations, com isintances e outras coisas relacionadas com tipo.
