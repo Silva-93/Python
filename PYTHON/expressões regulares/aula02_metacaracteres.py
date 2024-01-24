@@ -1,15 +1,19 @@
 import re
 
-# . -> significa "qualquer caracter" por padrão ele não seleciona uma quebra de linha
+# Busca
+    # . -> significa "qualquer caracter" por padrão ele não seleciona uma quebra de linha
+    # [] -> significa um "conjunto" de caracteres
+    # | -> significa "ou"
+
+# Quantificadores
+    # * -> 0 ou N vezes, é aplica ao caracter a esquerda do sinal
+    # + -> 1 ou N vezes, é aplica ao caracter a esquerda do sinal
+    # ? -> 0 ou 1 vez, pode ou não existir
+    # {min, max} -> min ou max de vez | também pode ser uma quantidade "ilimitada" de vezes 
+
 # ^ -> 
 # $ -> 
-# * -> 
-# + -> 
-# ? -> 
-# {} -> 
-# [] -> significa um "conjunto" de caracteres
 # \ -> 
-# | -> significa "ou"
 # () -> 
 
 
