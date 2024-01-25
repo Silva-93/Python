@@ -11,9 +11,9 @@ import re
     # [] -> significa um "conjunto" de caracteres
     # | -> significa "ou"
 
-# ^ -> 
-# $ -> 
-# \ -> 
+# ^ -> Começa com ...
+# $ -> Termina com ... 
+# \ -> caracter de escape
 # () -> Define grupos, procura expecificamente o que está dentro dos ()
 
 

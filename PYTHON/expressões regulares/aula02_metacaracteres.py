@@ -11,9 +11,9 @@ import re
     # ? -> 0 ou 1 vez, pode ou não existir
     # {min, max} -> min ou max de vez | também pode ser uma quantidade "ilimitada" de vezes 
 
-# ^ -> 
-# $ -> 
-# \ -> 
+# ^ -> Começa com ...
+# $ -> Termina com ...
+# \ -> caracter de escape
 # () -> Define grupos, procura expecificamente o que está dentro dos ()
 
 
