@@ -14,7 +14,7 @@ import re
 # ^ -> 
 # $ -> 
 # \ -> 
-# () -> 
+# () -> Define grupos, procura expecificamente o que está dentro dos ()
 
 
 texto = '''
