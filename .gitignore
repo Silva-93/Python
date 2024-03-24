@@ -5,3 +5,4 @@ static/
 media/
 local_settings.py
 venv/
+.venv/
