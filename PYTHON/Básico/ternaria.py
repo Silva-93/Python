@@ -11,20 +11,3 @@
 digito = 7
 novoDigito = digito if digito <= 9 else 0
 print(novoDigito)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
